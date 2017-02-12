@@ -1,3 +1,16 @@
+# This project demonstrates multiple mysql databases and start of phpMyAdmin
+
+example:
+Start 2 database instances with same settings (from same directory)
+Start 2 phpMyAdmin consoles
+
+% ./run-mysql.sh db1
+% ./run-mysql.sh db2
+% ./run-phpMyAdmin.sh db1 8081
+phpMyAdmin for db1 should now be at http://localhost:8081
+% ./run-phpMyAdmin.sh db2 8082
+phpMyAdmin for db2 should now be at http://localhost:8082
+
 # Run MySql inside docker container
 
 inspired from https://github.com/besnik/tutorials/tree/master/docker-mysql
