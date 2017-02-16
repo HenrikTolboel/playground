@@ -15,7 +15,9 @@ echo "Name=$Name"
 
 echo "Port=$Port"
 
-docker run --rm --name admin-$Name -d --link $Name -p $Port:80 -e PMA_HOST=$Name phpmyadmin/phpmyadmin
+docker network create my-net
+
+docker run --rm --name admin-$Name -d --network my-net -p $Port:80 -e PMA_HOST=$Name phpmyadmin/phpmyadmin
 
 echo "phpMyAdmin for $Name should now be at http://localhost:$Port"
 
