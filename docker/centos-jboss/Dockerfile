@@ -1,4 +1,4 @@
-# dockerfile to build image for JBoss EAP 7.0
+# dockerfile to build image for JBoss EAP 7.1
 
 # start from centos
 FROM centos:latest
@@ -24,13 +24,13 @@ RUN mkdir -p /opt/rh
 
 WORKDIR /opt/rh
 
-# install JBoss EAP 7.0.0
-ADD jboss-eap-7.0.0.zip /tmp/jboss-eap-7.0.0.zip
-RUN unzip /tmp/jboss-eap-7.0.0.zip
-RUN rm /tmp/jboss-eap-7.0.0.zip
+# install JBoss EAP 7.1.0
+ADD jboss-eap-7.1.0.zip /tmp/jboss-eap-7.1.0.zip
+RUN unzip /tmp/jboss-eap-7.1.0.zip
+RUN rm /tmp/jboss-eap-7.1.0.zip
 
 # set environment
-ENV JBOSS_HOME /opt/rh/jboss-eap-7.0
+ENV JBOSS_HOME /opt/rh/jboss-eap-7.1
 
 WORKDIR /home/jboss
 

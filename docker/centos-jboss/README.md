@@ -3,21 +3,30 @@
 
 # Get:
 
-Get the jboss-eap-7.0.0.zip file from the web.
+Get the jboss-eap-7.1.0.zip file from the web. (google "get jboss-eap-7.1.0.zip" and create an account with red hat)
 
 # Build:
-docker build --rm -t jboss-myapp:latest .
+```
+docker build --rm -t centos-jboss:latest .
+```
 
 
 # If You dont have it already
+```
 docker network create my-net
+```
 
 # Run:
-docker run --network my-net --name jboss-myapp --publish-all -it jboss-myapp /bin/bash
+Run with commandline
+````
+docker run --network my-net --name jboss-myapp --publish-all -it centos-jboss /bin/bash
+```
 
-You get a command line also
+Run without commandline
 
-docker run --network my-net --name jboss-myapp --publish-all -it jboss-myapp
+```
+docker run --network my-net --name jboss-myapp --publish-all -it centos-jboss
+```
 
 No commandline.
 
