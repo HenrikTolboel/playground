@@ -18,7 +18,7 @@ docker network create my-net
 
 # Run:
 Run with commandline
-````
+```
 docker run --network my-net --name jboss-myapp --publish-all -it centos-jboss /bin/bash
 ```
 
@@ -28,7 +28,6 @@ Run without commandline
 docker run --network my-net --name jboss-myapp --publish-all -it centos-jboss
 ```
 
-No commandline.
 
 # Inspirred by:
 https://github.com/fbascheper/JBoss-EAP-Docker-image
