@@ -19,14 +19,21 @@ docker network create my-net
 # Run:
 Run with commandline
 ```
-docker run --network my-net --name jboss-myapp --publish-all -it centos-jboss /bin/bash
+docker run --network my-net --name my-jboss --publish-all -it centos-jboss /bin/bash
 ```
 
 Run without commandline
 
 ```
-docker run --network my-net --name jboss-myapp --publish-all -it centos-jboss
+docker run --network my-net --name my-jboss --publish-all -d centos-jboss
 ```
+
+connect to it (bash) if needed:
+
+```
+docker exec -it <container id> /bin/bash
+```
+
 
 
 # Inspirred by:

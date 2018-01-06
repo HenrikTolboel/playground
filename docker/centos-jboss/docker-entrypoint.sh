@@ -13,7 +13,7 @@
 
 # set -e
 
-export JBOSS_HOME=/opt/rh/jboss-eap-7.0
+export JBOSS_HOME=/opt/rh/jboss-eap-7.1
 
 export JBOSS_CLI=$JBOSS_HOME/bin/jboss-cli.sh
 export PATH=$JBOSS_HOME/bin:$PATH
