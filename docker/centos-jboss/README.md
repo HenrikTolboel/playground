@@ -39,12 +39,15 @@ docker exec -it <container id> /bin/bash
 You can have envrironment variables on the command line by supplying values
 on the ```docker run``` commands.
 
-You can apecify e.g. ```-e JBOSS_USER=jbossadmin``` to specify the name of
-the admin user (this is the default value).
+You can apecify e.g. 
+
+```-e JBOSS_USER=jbossadmin``` to specify the name of the admin user (this is the default value).
 
 ```-e JBOSS_PASSWORD=jboss@min1``` for the password (default value)
-```-e JBOSS_DEBUG_SUSPEND=true``` for enabling debug connection on port
-8787
+
+```-e JBOSS_DEBUG_SUSPEND=true``` for enabling debug connection on port 8787
+
+```-e JBOSS_CONFIG=standalone-full.xml``` use the full config file instead
 
 See the docker-entrypoint.sh script for details.
 
