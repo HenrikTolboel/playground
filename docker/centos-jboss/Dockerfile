@@ -64,6 +64,8 @@ EXPOSE 8080 9990 9999 8787
 
 USER jboss
 
+ENV PATH "$PATH:$JBOSS_HOME/bin"
+
 ############################################
 # Start JBoss in stand-alone mode
 ############################################
