@@ -1,20 +1,10 @@
 # dockerfile to build image for JBoss EAP 7.1
 
-# start from centos
-FROM centos:latest
+# start from centos-java
+FROM centos-java:latest
 
 # file author / maintainer
 MAINTAINER "Henrik Tolboel" "henrik.tolboel@gmail.com"
-
-# update OS
-RUN yum -y update && \
-yum -y install sudo openssh-clients telnet unzip java-1.8.0-openjdk-devel && \
-yum clean all
-
-# enabling sudo group
-# enabling sudo over ssh
-RUN echo '%wheel ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers && \
-sed -i 's/.*requiretty$/Defaults !requiretty/' /etc/sudoers
 
 # add a user for the application, with sudo permissions
 RUN useradd -m jboss ; echo jboss: | chpasswd ; usermod -a -G wheel jboss
