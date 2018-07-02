@@ -16,7 +16,7 @@ discovery.zen.minimum_master_nodes: 1
 discovery.type: single-node
 
 # turn off security a.k.a usernames and passwords
-xpack.security.enabled: false
+#xpack.security.enabled: false
 
 # turn on monitoring logstash, beat, elasticsearch etc. in kibana gui
 xpack.monitoring.enabled: true

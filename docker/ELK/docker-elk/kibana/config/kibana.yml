@@ -12,4 +12,4 @@ elasticsearch.url: http://elasticsearch:9200
 #elasticsearch.password: changeme
 
 # turn off security a.k.a usernames and passwords
-xpack.security.enabled: false
+#xpack.security.enabled: false
