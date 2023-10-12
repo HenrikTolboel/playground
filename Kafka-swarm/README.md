@@ -62,6 +62,7 @@ docker exec --interactive --tty broker kafka-console-consumer  --bootstrap-serve
 ```
 
 
+https://github.com/edenhill/kcat
 
 ```
 ➜  services git:(master) ✗ kcat -b localhost:9092 -t henrikTopic
