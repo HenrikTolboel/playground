@@ -63,3 +63,14 @@ docker exec --interactive --tty broker kafka-console-consumer  --bootstrap-serve
 
 
 
+```
+➜  services git:(master) ✗ kcat -b localhost:9092 -t henrikTopic
+% Auto-selecting Consumer mode (use -P or -C to override)
+{"event_time":"2023-10-12T13:12:37.561Z","event_name":"ACCOUNT_TEST","account_id":"TESTEVENT_accountId"}
+{"event_time":"2023-10-12T13:17:12.629Z","event_name":"ACCOUNT_TEST","account_id":"TESTEVENT_accountId"}
+% Reached end of topic henrikTopic [2] at offset 5
+% Reached end of topic henrikTopic [0] at offset 26
+% Reached end of topic henrikTopic [1] at offset 3
+^C%
+```
+
